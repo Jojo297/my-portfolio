@@ -5,11 +5,20 @@
   --foreground: #171717;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+@variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --animate-float-y: floatY 4s ease-in-out infinite;
+
+  @keyframes floatY {
+    0%,
+    100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-12px);
+    }
+  }
 }
 
 @media (prefers-color-scheme: dark) {
