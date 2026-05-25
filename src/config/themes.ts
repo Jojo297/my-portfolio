@@ -21,6 +21,23 @@ export const t = {
   catBg: "bg-gray-100 dark:bg-gray-800/60",
   footer:
     "border-gray-200 dark:border-gray-800 text-gray-400 dark:text-gray-500",
+  logoThemeClass:
+    "bg-white/90 border-gray-200 text-violet-600 dark:border-gray-700 dark:bg-gray-900/90 dark:text-gray-border-gray-700 dark:text-violet-400",
+  navThemeClass:
+    "bg-white/90 border-gray-200 dark:bg-gray-900/90 dark:border-gray-700",
+  toggleThemeClass:
+    "bg-white/90 border-gray-200 dark:bg-gray-900/90 dark:border-gray-700",
+  bgBtnNav:
+    "text-gray-500 hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-800",
+  logoAnimation: "rotate-180 dark:rotate-0",
+  heroSub: "text-gray-600 dark:text-gray-300",
+  photoFrame: "border-violet-400/40 dark:border-violet-500/40",
+  photoBg:
+    "bg-gradient-to-br from-gray-100 via-gray-200 to-violet-100 dark:from-gray-800 dark:via-gray-900 dark:to-violet-900/40",
+  floatBadge: "bg-white border-gray-200 dark:bg-gray-900 dark:border-gray-700",
   socialIcon:
-    "bg-gray-100 dark:bg-gray-800 border-gray-200 dark:border-gray-700",
+    "bg-gray-800 border-gray-700 dark:bg-gray-100 dark:border-gray-200",
+  socialCard: "bg-white border-gray-200 dark:bg-gray-900 dark:border-gray-800",
+  githubBg: "bg-gray-900 dark:bg-white",
+  githubBorder: "hover:border-gray-900 dark:hover:border-white",
 };

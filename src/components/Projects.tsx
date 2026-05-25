@@ -27,7 +27,7 @@ export default function Projects() {
       desc: "An Android app for real-time clove ripeness detection using on-device ML. Powered by TensorFlow Lite and MediaPipe, it delivers fast and accurate agricultural analysis directly from your phone — no internet required.",
       tags: ["Kotlin", "TensorFlow Lite", "MediaPipe"],
       github: "https://github.com/Jojo297/Clavo",
-      live: "https://fruitdetect.id/",
+      live: "https://fruitdetect.id",
     },
     {
       icon: logoJagoIngat,
@@ -42,7 +42,7 @@ export default function Projects() {
     },
   ];
   return (
-    <section id="projects" className="max-w-4xl mx-auto px-6 py-24">
+    <section id="projects" className="max-w-4xl mx-auto py-24">
       <div className="w-12 h-1 bg-violet-500 rounded mb-4" />
       <h2 className="text-3xl font-semibold mb-1">Projects</h2>
       <p className={`${t.muted} text-sm mb-12`}>Some things I've built</p>
@@ -59,12 +59,12 @@ export default function Projects() {
                 alt={p.title}
                 className="w-full h-full object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+              <div className="absolute inset-0 bg-linier-to-t from-black/60 to-transparent" />
               <span className="absolute bottom-3 left-3 text-2xl">
                 <Image
                   src={p.icon}
                   alt={`${p.title} logo`}
-                  className="object-contain w-8 h-8 rounded-md"
+                  className="object-contain w-8 h-8 rounded-md shadow"
                 />
               </span>
             </div>
