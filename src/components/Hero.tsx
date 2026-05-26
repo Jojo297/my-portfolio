@@ -9,7 +9,7 @@ export default function Hero() {
       .getElementById(id.toLowerCase())
       ?.scrollIntoView({ behavior: "smooth" });
   return (
-    <section className="max-w-4xl mx-auto  min-h-screen grid md:grid-cols-2 gap-12 items-center pt-20">
+    <section className="max-w-4xl mx-auto min-h-screen px-6 grid md:px-0 md:grid-cols-2 gap-12 items-center pt-20 md:pt-16">
       {/* LEFT — Text */}
       <div>
         <span

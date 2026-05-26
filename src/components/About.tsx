@@ -79,7 +79,7 @@ const SOCIALS = [
 
 export default function About() {
   return (
-    <section id="about" className="max-w-4xl mx-auto py-24">
+    <section id="about" className="max-w-4xl mx-auto py-24 px-6 md:px-0">
       <div className="w-12 h-1 bg-violet-500 rounded mb-4" />
       <h2 className="text-3xl font-semibold mb-1">About Me</h2>
       <p className={`${t.muted} text-sm mb-12`}>A little bit about who I am</p>
