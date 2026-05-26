@@ -42,7 +42,7 @@ export default function Projects() {
     },
   ];
   return (
-    <section id="projects" className="max-w-4xl mx-auto py-24">
+    <section id="projects" className="max-w-4xl mx-auto py-24 px-6 md:px-0">
       <div className="w-12 h-1 bg-violet-500 rounded mb-4" />
       <h2 className="text-3xl font-semibold mb-1">Projects</h2>
       <p className={`${t.muted} text-sm mb-12`}>Some things I've built</p>

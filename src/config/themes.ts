@@ -22,13 +22,14 @@ export const t = {
   footer:
     "border-gray-200 dark:border-gray-800 text-gray-400 dark:text-gray-500",
   logoThemeClass:
-    "bg-white/90 border-gray-200 text-violet-600 dark:border-gray-700 dark:bg-gray-900/90 dark:text-gray-border-gray-700 dark:text-violet-400",
+    "bg-white/90 border-gray-200 text-violet-600 dark:bg-gray-900/90 dark:border-gray-700 dark:text-violet-400",
   navThemeClass:
     "bg-white/90 border-gray-200 dark:bg-gray-900/90 dark:border-gray-700",
   toggleThemeClass:
     "bg-white/90 border-gray-200 dark:bg-gray-900/90 dark:border-gray-700",
   bgBtnNav:
     "text-gray-500 hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-800",
+  divider: "bg-gray-200 dark:bg-gray-700",
   logoAnimation: "rotate-180 dark:rotate-0",
   heroSub: "text-gray-600 dark:text-gray-300",
   photoFrame: "border-violet-400/40 dark:border-violet-500/40",

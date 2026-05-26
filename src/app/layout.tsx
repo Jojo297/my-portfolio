@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  // metadataBase: new URL("https://afif.dev"),
+  metadataBase: new URL("https://pipuyy.vercel.app"),
 
   title: {
     default: "pipuyy | Full Stack Developer",
@@ -26,6 +26,8 @@ export const metadata: Metadata = {
   keywords: [
     "Muhammad Afiffudin",
     "Muhammad Afiffudin Al Mahdi",
+    "Politeknik Negeri Batam",
+    "Polibatam",
     "Pipuy",
     "Full Stack Developer",
     "Ai Integration",
@@ -43,14 +45,14 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "id_ID",
-    url: "https://afif.dev",
+    url: "https://pipuyy.vercel.app/",
     title: "Muhammad Afiffudin | Full Stack Developer",
     description:
       "Explore my projects, skills, and experience as a Full Stack Developer.",
     siteName: "Muhammad Afiffudin Portfolio",
     images: [
       {
-        url: "/og-image.jpg",
+        url: "/preview.png",
         width: 1200,
         height: 630,
         alt: "Muhammad Afiffudin Portfolio Cover",
@@ -64,7 +66,7 @@ export const metadata: Metadata = {
     title: "Muhammad Afiffudin | Full Stack Developer",
     description:
       "Explore my projects, skills, and experience as a Full Stack Developer.",
-    images: ["/og-image.jpg"],
+    images: ["/preview.png"],
   },
 
   robots: {

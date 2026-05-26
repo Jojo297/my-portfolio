@@ -10,13 +10,6 @@ interface FormState {
 }
 
 export default function Contact() {
-  const [form, setForm] = useState<FormState>({
-    name: "",
-    email: "",
-    message: "",
-  });
-  const [sent, setSent] = useState(false);
-
   const SOCIALS = [
     {
       name: "LinkedIn",
@@ -94,83 +87,137 @@ export default function Contact() {
     },
   ];
 
-  const handleSend = () => {
-    setSent(true);
-  };
   return (
-    <section id="contact" className="max-w-4xl mx-auto py-24">
+    <section id="contact" className="max-w-4xl mx-auto py-24 px-6 md:px-0">
+      {/* H2 dan P tidak diubah gayanya */}
       <div className="w-12 h-1 bg-violet-500 rounded mb-4" />
       <h2 className="text-3xl font-semibold mb-1">Contact</h2>
       <p className={`${t.muted} text-sm mb-12`}>Let's work together</p>
-      <div className={`${t.bg2} border ${t.border} rounded-2xl p-8`}>
-        <div className="gap-3">
-          <p
-            className={`text-xs font-semibold uppercase tracking-widest ${t.muted} mb-4`}
-          >
-            Connect with me
-          </p>
 
-          <div className="grid grid-cols-2 gap-3">
-            {SOCIALS.map((s) => {
-              const isGithub = s.name === "GitHub";
+      {/* Box Utama */}
+      <div
+        className={`${t.bg2} border ${t.border} rounded-3xl p-8 md:p-10 shadow-sm`}
+      >
+        <div className="grid md:grid-cols-5 gap-10 items-center">
+          {/* Bagian Kiri: Pesan Pribadi & CTA Utama */}
+          <div className="md:col-span-2 flex flex-col justify-center">
+            {/* Status Badge */}
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-green-500/10 text-green-600 dark:text-green-400 text-xs font-semibold w-fit mb-6 border border-green-500/20">
+              <span className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" />
+              Available for opportunities
+            </div>
 
-              const borderHoverClass = isGithub ? t.githubBorder : s.border;
+            <h3 className={`text-2xl font-bold ${t.text} mb-3`}>
+              Let's build something <span className={t.accent}>awesome.</span>
+            </h3>
 
-              return (
-                <a
-                  key={s.name}
-                  href={s.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={`group flex items-center gap-4 p-4 rounded-2xl border ${t.socialCard} ${borderHoverClass} ${s.shadow} transition-all duration-300 hover:-translate-y-1 hover:shadow-lg`}
-                >
-                  {/* Icon Wrapper */}
-                  <div
-                    className={`w-10 h-10 rounded-xl flex items-center justify-center shrink-0 transition-transform duration-300 group-hover:scale-110 overflow-hidden ${
-                      isGithub ? t.githubBg : ""
-                    }`}
-                    style={
-                      !isGithub
-                        ? s.color === "instagram"
-                          ? {
-                              background:
-                                "linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888)",
-                            }
-                          : { backgroundColor: s.color || undefined }
-                        : {}
-                    }
+            <p className={`${t.sub} text-sm leading-relaxed mb-8`}>
+              Whether you have a project in mind, an internship opportunity, or
+              just want to say hi, I'm always open to discussing new ideas!
+            </p>
+
+            {/* Tombol Email Utama */}
+            <a
+              href="mailto:mafiffudin28@gmail.com"
+              className={`inline-flex items-center justify-center gap-2 ${t.btn} px-6 py-3 rounded-xl text-sm font-medium transition-all hover:-translate-y-1 hover:shadow-lg hover:shadow-violet-500/25 w-fit`}
+            >
+              <svg
+                className="w-4 h-4"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth="2"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                />
+              </svg>
+              Send me an email
+            </a>
+          </div>
+
+          {/* Bagian Kanan: Grid Social Media */}
+          <div className="md:col-span-3">
+            <p
+              className={`text-xs font-semibold uppercase tracking-widest ${t.muted} mb-5 ml-1`}
+            >
+              Or connect on socials
+            </p>
+
+            {/* Responsif: 1 Kolom di HP (grid-cols-1), 2 Kolom di Tablet/Desktop (sm:grid-cols-2) */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              {SOCIALS.map((s) => {
+                const isGithub = s.name === "GitHub";
+                const borderHoverClass = isGithub ? t.githubBorder : s.border;
+
+                return (
+                  <a
+                    key={s.name}
+                    href={s.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`group flex items-center gap-4 p-5 rounded-2xl border ${t.socialCard} ${borderHoverClass} ${s.shadow} hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-all duration-300 hover:-translate-y-1`}
                   >
-                    {isGithub ? (
-                      <>
-                        <span className="block dark:hidden">{s.logoLight}</span>
-                        <span className="hidden dark:block">{s.logoDark}</span>
-                      </>
-                    ) : (
-                      s.logo
-                    )}
-                  </div>
+                    {/* Icon Wrapper */}
+                    <div
+                      className={`w-11 h-11 rounded-xl flex items-center justify-center shrink-0 transition-transform duration-300 group-hover:scale-110 overflow-hidden shadow-sm ${
+                        isGithub ? t.githubBg : ""
+                      }`}
+                      style={
+                        !isGithub
+                          ? s.color === "instagram"
+                            ? {
+                                background:
+                                  "linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888)",
+                              }
+                            : { backgroundColor: s.color || undefined }
+                          : {}
+                      }
+                    >
+                      {isGithub ? (
+                        <>
+                          <span className="block dark:hidden">
+                            {s.logoLight}
+                          </span>
+                          <span className="hidden dark:block">
+                            {s.logoDark}
+                          </span>
+                        </>
+                      ) : (
+                        s.logo
+                      )}
+                    </div>
 
-                  {/* Text */}
-                  <div className="flex-1 min-w-0">
-                    <p className={`text-sm font-semibold ${t.text}`}>
-                      {s.name}
-                    </p>
-                    <p className={`text-xs ${t.muted} truncate`}>{s.handle}</p>
-                  </div>
+                    {/* Text */}
+                    <div className="flex-1 min-w-0">
+                      <p className={`text-sm font-semibold ${t.text}`}>
+                        {s.name}
+                      </p>
+                      <p className={`text-xs ${t.muted} truncate`}>
+                        {s.handle}
+                      </p>
+                    </div>
 
-                  {/* Arrow */}
-                  <svg
-                    viewBox="0 0 24 24"
-                    className={`w-4 h-4 ${t.muted} transition-transform duration-300 group-hover:translate-x-1 shrink-0`}
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                  >
-                    <path d="M5 12h14M12 5l7 7-7 7" />
-                  </svg>
-                </a>
-              );
-            })}
+                    {/* Arrow - Diubah menjadi panah diagonal (External Link) */}
+                    <svg
+                      viewBox="0 0 24 24"
+                      className={`w-4 h-4 ${t.muted} transition-all duration-300 group-hover:translate-x-1 group-hover:-translate-y-1 shrink-0`}
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2.5"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"
+                      />
+                    </svg>
+                  </a>
+                );
+              })}
+            </div>
           </div>
         </div>
       </div>

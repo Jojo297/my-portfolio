@@ -120,7 +120,7 @@ export default function Skills() {
   ];
 
   return (
-    <section id="skills" className="max-w-4xl mx-auto py-24">
+    <section id="skills" className="max-w-4xl mx-auto py-24 px-6 md:px-0">
       <div className="w-12 h-1 bg-violet-500 rounded mb-4" />
       <h2 className="text-3xl font-semibold mb-1">Skills</h2>
       <p className={`${t.muted} text-sm mb-12`}>Technologies I work with</p>
@@ -144,14 +144,13 @@ export default function Skills() {
                   key={s.name}
                   className={`group flex items-center gap-2.5 px-4 py-2.5 rounded-xl border ${t.border} ${t.bg3} hover:bg-violet-500/5 hover:border-violet-500/30 transition-all duration-300 cursor-default hover:-translate-y-1 hover:shadow-lg hover:shadow-violet-500/10`}
                 >
-                  {/* Bagian Icon/Logo */}
+                  {/* Icon/Logo */}
                   <div className="w-5 h-5 flex items-center justify-center shrink-0">
                     {s.logo ? (
                       <img
                         src={s.logo}
                         alt={s.name}
                         loading="lazy"
-                        // Jika invertDark true, logo akan jadi putih saat dark mode (berguna untuk logo hitam seperti Github/Express)
                         className={`w-full h-full object-contain transition-transform duration-300 group-hover:scale-125 group-hover:-rotate-3`}
                       />
                     ) : (
