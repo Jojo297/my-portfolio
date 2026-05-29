@@ -5,6 +5,8 @@ import logoJagoIngat from "@/assets/logo-JagoIngat.png";
 import coverClavo from "@/assets/cover-clavo.png";
 import coverJagoIngat from "@/assets/cover-JagoIngat.png";
 import coverTempa from "@/assets/cover-tempa.png";
+import coverRangkumin from "@/assets/cover-rangkumin.jpeg";
+import logoRangkumin from "@/assets/logo-rangkumin.png";
 import Image from "next/image";
 
 export default function Projects() {
@@ -32,13 +34,22 @@ export default function Projects() {
     {
       icon: logoJagoIngat,
       cover: coverJagoIngat,
-      // "https://images.unsplash.com/photo-1580894894513-541e068a3e2b?w=600&q=80",
       title: "JagoIngat",
       subtitle: "Memory Enhancement App",
       desc: "A React-based memory training app featuring interactive exercises and games to sharpen recall and cognitive skills. Clean UI, progress tracking, and techniques suited for all ages make memory improvement fun and accessible.",
       tags: ["React.js", "Tailwind CSS"],
       github: "https://github.com/Jojo297/JagoIngat",
       live: "https://jago-ingat.vercel.app/",
+    },
+    {
+      icon: logoRangkumin,
+      cover: coverRangkumin,
+      title: "Rangkumin",
+      subtitle: "AI-Powered Academic Summarizer",
+      desc: "A Manifest V3 Google Chrome extension that instantly extracts and summarizes scientific journals using a Bring Your Own Key (BYOK) architecture. It integrates with top LLMs to deliver structured summaries—highlighting main problems, methodologies, and results—alongside auto-generated academic citations.",
+      tags: ["JavaScript", "Chrome Extension", "Tailwind CSS", "REST API"],
+      github: "https://github.com/Jojo297/Rangkumin",
+      live: "https://github.com/Jojo297/Rangkumin",
     },
   ];
   return (
@@ -57,7 +68,7 @@ export default function Projects() {
               <Image
                 src={p.cover}
                 alt={p.title}
-                className="w-full h-full object-cover"
+                className="w-3xl h-full object-cover"
               />
               <div className="absolute inset-0 bg-linier-to-t from-black/60 to-transparent" />
               <span className="absolute bottom-3 left-3 text-2xl">
