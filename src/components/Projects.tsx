@@ -19,7 +19,7 @@ export default function Projects() {
       desc: "A digital education platform that lets students experience college life before committing to a major. Explore free trial courses across disciplines, get AI-powered guidance, and make a confident, informed decision about your academic future.",
       tags: ["React.js", "Express.js", "Prisma", "MySQL", "Gemini API"],
       github: "https://github.com/T-E-M-P-A",
-      live: "https://tempaa.ddns.net/",
+      live: "https://tempa.biz.id",
     },
     {
       icon: logoClavo,
@@ -39,7 +39,7 @@ export default function Projects() {
       desc: "A React-based memory training app featuring interactive exercises and games to sharpen recall and cognitive skills. Clean UI, progress tracking, and techniques suited for all ages make memory improvement fun and accessible.",
       tags: ["React.js", "Tailwind CSS"],
       github: "https://github.com/Jojo297/JagoIngat",
-      live: "https://jago-ingat.vercel.app/",
+      live: "https://jago-ingat.vercel.app",
     },
     {
       icon: logoRangkumin,
